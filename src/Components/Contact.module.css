@@ -1,0 +1,63 @@
+.contact {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 20rem auto;
+  grid-template-areas: "dtls farea";
+  flex-wrap: wrap;
+  padding: 4.5rem;
+  background-color: rgb(238, 232, 232);
+}
+
+.detailsContainer {
+  grid-area: dtls;
+  border-right: 1px solid grey;
+}
+.formarea {
+  grid-area: farea;
+}
+.details {
+  margin: 3rem;
+}
+.formarea form {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  margin: 3rem;
+}
+input,
+textarea,
+button {
+  padding: 1rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  margin-top: 0.5rem;
+  background: none;
+}
+textarea {
+  padding: 2.5rem;
+}
+textarea:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+@media only screen and(max-width: 550px) {
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr;
+    grid-template-areas:
+      "dtls"
+      "farea";
+  }
+  .formarea {
+    grid-area: farea;
+  }
+  .details {
+    margin: 3rem;
+  }
+}
