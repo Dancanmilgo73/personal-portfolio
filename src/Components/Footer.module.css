@@ -4,6 +4,35 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 10rem;
+  min-height: 10rem;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-family: Andale Mono, monospace;
+  font-size: 1.5rem;
+}
+.icon i {
+  font-size: 2rem;
+  color: rgb(230, 223, 223);
+}
+.icon i:hover {
+  cursor: pointer;
+}
+.design {
+  font-family: Andale Mono, monospace;
+  font-weight: bold;
+  text-align: center;
 }

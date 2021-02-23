@@ -5,9 +5,17 @@ import joblistImg from "./Assets/joblist.png";
 import portfolioImg from "./Assets/portfolio.png";
 export default function Projects() {
   const projects = [
-    { title: "Recipe Search", photo: recipeImg },
-    { title: "Job Listing", photo: joblistImg },
-    { title: "Portfolio", photo: portfolioImg },
+    {
+      title: "Recipe Search",
+      photo: recipeImg,
+      url: "https://pensive-benz-57306a.netlify.app/",
+    },
+    {
+      title: "Job Listing",
+      photo: joblistImg,
+      url: "https://cranky-curran-491579.netlify.app/",
+    },
+    { title: "Portfolio", photo: portfolioImg, url: "#" },
   ];
   return (
     <div className={style.project}>
@@ -16,6 +24,12 @@ export default function Projects() {
         {projects.map((projo) => (
           <div className={style.card}>
             <img src={projo.photo} alt={projo.title} />
+            <div className={style.overlay}>
+              <div className={style.projoTitle}>{projo.title}</div>
+              <a href={projo.url} target="_blank" rel="noopener noreferrer">
+                <button>Demo</button>
+              </a>
+            </div>
           </div>
         ))}
       </div>

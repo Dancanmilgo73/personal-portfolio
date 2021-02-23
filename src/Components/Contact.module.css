@@ -1,63 +1,84 @@
 .contact {
   width: 100%;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 30% auto;
-  grid-template-rows: 20rem auto;
-  grid-template-areas: "dtls farea";
+  display: flex;
+  /* flex-direction: row; */
   flex-wrap: wrap;
-  padding: 4.5rem;
-  background-color: rgb(238, 232, 232);
+  margin: 0;
+  padding: 0;
 }
-
 .detailsContainer {
-  grid-area: dtls;
-  border-right: 1px solid grey;
+  width: 25%;
+  background-color: rgb(250, 248, 248);
+  padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
+  flex-grow: 1;
 }
 .formarea {
-  grid-area: farea;
-}
-.details {
-  margin: 3rem;
+  width: 70%;
+  background-color: rgb(250, 248, 248);
+  margin: 0 1rem 1rem 1rem;
+  padding: 1rem;
+  flex-grow: 1;
 }
 .formarea form {
   display: flex;
   flex-direction: column;
 }
-form {
-  margin: 3rem;
-}
-input,
-textarea,
-button {
-  padding: 1rem;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid rgb(255, 255, 255);
-  margin-top: 0.5rem;
+.formarea input,
+.formarea button,
+.formarea textarea {
+  border: none;
+  margin: 0.2rem 0 0.2rem 0;
   background: none;
 }
-textarea {
-  padding: 2.5rem;
+.formarea input,
+.formarea textarea {
+  font-family: Courier New, monospace;
 }
-textarea:focus,
-input:focus,
-button:focus {
+.formarea input:focus,
+.formarea button:focus,
+.formarea textarea:focus {
   outline: none;
 }
-@media only screen and(max-width: 550px) {
-  .contact {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.4fr;
-    grid-template-areas:
-      "dtls"
-      "farea";
-  }
-  .formarea {
-    grid-area: farea;
-  }
-  .details {
-    margin: 3rem;
+.formarea input {
+  padding: 1rem;
+  border-bottom: 1px solid rgb(163, 162, 162);
+}
+.formarea textarea {
+  padding: 2.5rem;
+  border-bottom: 1px solid rgb(163, 162, 162);
+}
+.formarea button {
+  width: 20%;
+  border: 1px solid rgb(163, 162, 162);
+  padding: 0.7rem;
+  border-top-left-radius: 25% 60%;
+  border-bottom-left-radius: 25% 60%;
+  border-top-right-radius: 25% 60%;
+  border-bottom-right-radius: 25% 60%;
+  cursor: pointer;
+}
+.formarea button:hover {
+  border: 1px solid rgb(63, 63, 63);
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.detail i,
+.detail h6,
+.detail p {
+  margin: 0.2rem;
+}
+detail h6,
+.detail p {
+  font-family: Courier New, monospace;
+}
+@media screen and (max-width: 550px) {
+  .formarea button {
+    width: 25vw;
   }
 }

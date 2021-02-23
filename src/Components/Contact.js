@@ -5,13 +5,23 @@ export default function Contact() {
     <div className={style.contact}>
       <div className={style.detailsContainer}>
         <div className={style.details}>
-          <i class="far fa-address-book"></i>
-          <h6>ADDRESS</h6>
-          <i class="fas fa-phone"></i>
-
-          <h6>PHONE</h6>
-          <i class="fas fa-envelope-square"></i>
-          <h6>EMAIL</h6>
+          <div className={style.detail}>
+            <i class="far fa-address-book"></i>
+            <h6>ADDRESS</h6>
+            <p>Nairobi,kenya</p>
+          </div>
+          <div className={style.detail}>
+            <i class="fas fa-phone"></i>
+            <h6>PHONE</h6>
+            <p>+254 700 000 940</p>
+          </div>
+          <div className={style.detail}>
+            <i class="fas fa-envelope-square"></i>
+            <h6>EMAIL</h6>
+            <p>
+              <a>dancanmilgo73@gmail.com</a>
+            </p>
+          </div>
         </div>
       </div>
       <div className={style.formarea}>
